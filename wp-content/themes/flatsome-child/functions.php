@@ -381,24 +381,24 @@ add_filter( 'woocommerce_variable_price_html', 'wc_varb_price_range', 10, 2 );
 
 /** CUSTOM DISPLAY SALE PRICE AND REGULAR PRICE */
 // Prefix the selected variation prices When discounted for variable products (on sale)
-add_filter( 'woocommerce_format_sale_price', 'prefix_variations_selected_prices', 10, 3 );
-function prefix_variations_selected_prices( $price, $regular_price, $sale_price ) {
-    global $product;
+// add_filter( 'woocommerce_format_sale_price', 'prefix_variations_selected_prices', 10, 3 );
+// function prefix_variations_selected_prices( $price, $regular_price, $sale_price ) {
+//     global $product;
 
-    // Just for variable products on single product pages
-    if( $product->is_type('variable') && is_product() ) {
+//     // Just for variable products on single product pages
+//     if( $product->is_type('variable') && is_product() ) {
 
-        // Custom texts
-        $price_txt =  __( 'Giá niêm yết', 'woocommerce' ) . ': ';
-        $sale_txt = __(' Giá ưu đãi', 'woocommerce' ).': ';
-        $percent = ( ( $regular_price - $sale_price  ) / $regular_price ) * 100;
-        $saving = $regular_price - $sale_price;
-        $html = '<del class="regular_price">' . $price_txt . wc_price( $regular_price ) . '</del> <strong class="main_price_detail">' . $sale_txt . wc_price( $sale_price ) . '</strong>';
-        $html .= '<p class="saving">Tiết kiệm:'. wc_price( $saving ) . '<span class="sale_percent">'.number_format($percent, 2).'%</span></p>';
-        return $html;
-    }
-    return $price;
-}
+//         // Custom texts
+//         $price_txt =  __( 'Giá niêm yết', 'woocommerce' ) . ': ';
+//         $sale_txt = __(' Giá ưu đãi', 'woocommerce' ).': ';
+//         $percent = ( ( $regular_price - $sale_price  ) / $regular_price ) * 100;
+//         $saving = $regular_price - $sale_price;
+//         $html = '<del class="regular_price">' . $price_txt . wc_price( $regular_price ) . '</del> <strong class="main_price_detail">' . $sale_txt . wc_price( $sale_price ) . '</strong>';
+//         $html .= '<p class="saving">Tiết kiệm:'. wc_price( $saving ) . '<span class="sale_percent">'.number_format($percent, 2).'%</span></p>';
+//         return $html;
+//     }
+//     return $price;
+// }
 
 
 add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 31 );
