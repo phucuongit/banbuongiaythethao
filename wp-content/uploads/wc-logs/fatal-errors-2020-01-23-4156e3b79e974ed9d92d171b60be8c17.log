@@ -1,0 +1,10 @@
+2020-01-23T13:03:32+00:00 CRITICAL Uncaught Error: Call to undefined function have_rows() in C:\xampp\htdocs\banbuongiaythethao\wp-content\themes\flatsome-child\functions.php:407
+Stack trace:
+#0 C:\xampp\htdocs\banbuongiaythethao\wp-includes\class-wp-hook.php(288): add_gift_for_single_product('')
+#1 C:\xampp\htdocs\banbuongiaythethao\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\banbuongiaythethao\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\banbuongiaythethao\wp-content\themes\flatsome\woocommerce\single-product\layouts\product.php(30): do_action('woocommerce_sin...')
+#4 C:\xampp\htdocs\banbuongiaythethao\wp-includes\template.php(724): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\banbuongiaythethao\wp-content\plugins\woocommerce\includes\wc-core-functions.php(195): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\banbuongiaythethao\wp-content\themes\flatsome\woocommerce\content-single-product.php(41): wc_get_template_part('single-product/...', 'righ in C:\xampp\htdocs\banbuongiaythethao\wp-content\themes\flatsome-child\functions.php on line 407
+

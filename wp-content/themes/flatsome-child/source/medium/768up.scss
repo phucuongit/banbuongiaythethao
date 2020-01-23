@@ -1,0 +1,36 @@
+.section-title.section-title-center{
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 30px;
+        width: 100%;
+        height: 1px;
+        background: #333;
+        color: black;
+        z-index: 0;
+    }
+    >.section-title-main{
+        font-style: italic;
+        font-weight: 600;
+        font-size: 28px;
+        color: black;
+        background: white;
+        z-index: 1;
+    }
+    b{
+        opacity: 0!important;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 35px;
+        width: 100%;
+        height: 1px;
+        background: #333;
+        z-index: 0;
+    }
+   
+}

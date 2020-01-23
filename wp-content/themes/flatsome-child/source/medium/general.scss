@@ -1,0 +1,90 @@
+$main-color: #333;
+
+.box-content-service {
+   text-align: center;
+   .title-service {
+      color: $main-color;
+      font-weight: 600;
+      text-transform: uppercase;
+   }
+   .content-service {
+      color: #787878;
+      font-size: 14px;
+      margin-top: 5px;
+   }
+}
+.absolute-footer.dark.medium-text-center.text-center{
+   display: none;
+}
+#footer{
+   border-top: 1px solid #addef0;
+}
+.footer-widgets.footer .is-divider.small {
+   height: 2px;
+   width: 40px;
+   background: #58b3f0;
+   left: 0;
+   bottom: 0;
+}
+.category-custome-home{
+   .product-category{
+      .box-image{
+               -webkit-transition: all 0.2s ease-in-out;
+               -moz-transition: all 0.2s ease-in-out;
+               -ms-transition: all 0.2s ease-in-out;
+               -o-transition: all 0.2s ease-in-out;
+               transition: all 0.2s ease-in-out;
+               &:hover{
+                  box-shadow: 0px 5px 5px 0px #989797;
+                  -ms-transform: translate(0px,-3px);
+                  -webkit-transform: translate(0px,-3px);
+                  transform: translate(0px,-3px);
+               }
+            }
+      .box-text{
+         display: none;
+      }
+   }
+}
+.trademark-logo{
+   transition: none;
+   display: flex;
+   justify-content: center;
+   img{
+      opacity: 0.3;
+      width: auto!important;
+      transition: none;
+   }
+   &:hover img{
+      opacity: 1;
+      transition: none;
+   }
+   
+}
+.box-product-list, .shop-container{
+   .product-small.product{
+      &.outofstock{
+            img{
+               opacity: 0.4;
+            }
+      }
+      .col-inner{
+         box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.15);
+         &:hover{
+            box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.3);
+         }
+         .product-small.box{
+            padding: 15px 15px 0 15px;
+            max-height: 360px;
+            height: auto;
+            .box-text{
+               height: 100px;
+            }
+            
+         } 
+         .star-rating{
+            display: none;
+         }
+      }
+   }
+}
